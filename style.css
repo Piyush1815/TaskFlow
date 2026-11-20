@@ -1,0 +1,169 @@
+
+:root {
+    --primary-color: #4f46e5;
+    --background-color: #f4f5f9;
+    --card-color: #ffffff;
+
+    --high-color: #fee2e2;
+    --medium-color: #fef3c7;
+    --low-color: #dcfce7;
+
+    --text-color: #1f2937;
+    --muted-color: #6b7280;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    background-color: var(--background-color);
+    color: var(--text-color);
+    padding: 30px;
+}
+
+.app-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 30px;
+}
+
+.logo h1 {
+    font-size: 32px;
+    color: var(--primary-color);
+}
+
+.logo p {
+    color: var(--muted-color);
+    margin-top: 5px;
+}
+
+.add-task-btn {
+    background-color: var(--primary-color);
+    color: white;
+    border: none;
+    padding: 12px 20px;
+    border-radius: 8px;
+    cursor: pointer;
+}
+
+.task-form {
+    background-color: var(--card-color);
+    padding: 20px;
+    border-radius: 12px;
+    margin-bottom: 30px;
+    display: flex;
+    gap: 12px;
+    align-items: center;
+}
+
+.task-form h2 {
+    font-size: 18px;
+    margin-right: 10px;
+}
+
+.task-form input,
+.task-form select {
+    padding: 11px;
+    border: 1px solid #d1d5db;
+    border-radius: 7px;
+}
+
+.task-form input {
+    flex: 1;
+}
+
+.task-form button {
+    background-color: var(--primary-color);
+    color: white;
+    border: none;
+    padding: 11px 18px;
+    border-radius: 7px;
+    cursor: pointer;
+}
+
+.board {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 20px;
+}
+
+.column {
+    background-color: #e9eaf2;
+    padding: 20px;
+    border-radius: 12px;
+    min-height: 400px;
+}
+
+.column h2 {
+    font-size: 20px;
+    margin-bottom: 20px;
+}
+
+.task-card {
+    background-color: var(--card-color);
+    padding: 16px;
+    border-radius: 10px;
+    margin-bottom: 15px;
+    box-shadow: 0 2px 6px rgba(0, 0, 0, 0.05);
+}
+
+.task-title {
+    font-size: 16px;
+    margin-bottom: 12px;
+}
+
+.task-card p {
+    color: var(--muted-color);
+    font-size: 13px;
+    margin-top: 12px;
+}
+
+.priority-high,
+.priority-medium,
+.priority-low {
+    display: inline-block;
+    padding: 5px 10px;
+    border-radius: 20px;
+    font-size: 12px;
+    font-weight: bold;
+}
+
+.priority-high {
+    background-color: var(--high-color);
+    color: #b91c1c;
+}
+
+.priority-medium {
+    background-color: var(--medium-color);
+    color: #92400e;
+}
+
+.priority-low {
+    background-color: var(--low-color);
+    color: #166534;
+}
+
+@media (max-width: 700px) {
+    body {
+        padding: 15px;
+    }
+
+    .board {
+        grid-template-columns: 1fr;
+    }
+
+    .task-form {
+        flex-direction: column;
+        align-items: stretch;
+    }
+
+    .app-header {
+        gap: 15px;
+        flex-wrap: wrap;
+    }
+}
