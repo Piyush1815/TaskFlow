@@ -1,15 +1,14 @@
 
+
 :root {
-    --primary-color: #4f46e5;
-    --background-color: #f4f5f9;
-    --card-color: #ffffff;
-
-    --high-color: #fee2e2;
-    --medium-color: #fef3c7;
-    --low-color: #dcfce7;
-
-    --text-color: #1f2937;
-    --muted-color: #6b7280;
+    --primary: #4f46e5;
+    --background: #f4f6fb;
+    --white: #ffffff;
+    --text: #1f2937;
+    --muted: #6b7280;
+    --high: #ef4444;
+    --medium: #f59e0b;
+    --low: #22c55e;
 }
 
 * {
@@ -20,10 +19,12 @@
 
 body {
     font-family: Arial, sans-serif;
-    background-color: var(--background-color);
-    color: var(--text-color);
-    padding: 30px;
+    background: var(--background);
+    color: var(--text);
+    padding: 25px;
 }
+
+/* Header */
 
 .app-header {
     display: flex;
@@ -33,58 +34,65 @@ body {
 }
 
 .logo h1 {
-    font-size: 32px;
-    color: var(--primary-color);
+    color: var(--primary);
+    font-size: 30px;
 }
 
 .logo p {
-    color: var(--muted-color);
+    color: var(--muted);
     margin-top: 5px;
 }
 
-.add-task-btn {
-    background-color: var(--primary-color);
-    color: white;
-    border: none;
-    padding: 12px 20px;
-    border-radius: 8px;
+button {
     cursor: pointer;
+    border: none;
+    border-radius: 6px;
+    padding: 10px 15px;
+    font-weight: bold;
 }
 
+.add-task-btn {
+    background: var(--primary);
+    color: white;
+}
+
+/* Task Form */
+
 .task-form {
-    background-color: var(--card-color);
+    background: var(--white);
     padding: 20px;
-    border-radius: 12px;
+    border-radius: 10px;
     margin-bottom: 30px;
     display: flex;
+    flex-wrap: wrap;
     gap: 12px;
     align-items: center;
 }
 
 .task-form h2 {
-    font-size: 18px;
-    margin-right: 10px;
+    width: 100%;
+    font-size: 20px;
 }
 
 .task-form input,
 .task-form select {
     padding: 11px;
     border: 1px solid #d1d5db;
-    border-radius: 7px;
+    border-radius: 6px;
+    font-size: 14px;
 }
 
 .task-form input {
     flex: 1;
+    min-width: 180px;
 }
 
 .task-form button {
-    background-color: var(--primary-color);
+    background: var(--primary);
     color: white;
-    border: none;
-    padding: 11px 18px;
-    border-radius: 7px;
-    cursor: pointer;
 }
+
+/* Board */
 
 .board {
     display: grid;
@@ -93,60 +101,85 @@ body {
 }
 
 .column {
-    background-color: #e9eaf2;
-    padding: 20px;
-    border-radius: 12px;
-    min-height: 400px;
+    background: #e9edf5;
+    padding: 18px;
+    border-radius: 10px;
+    min-height: 300px;
 }
 
 .column h2 {
-    font-size: 20px;
-    margin-bottom: 20px;
+    margin-bottom: 18px;
+    font-size: 18px;
 }
+
+.task-list {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+}
+
+/* Task Cards */
 
 .task-card {
-    background-color: var(--card-color);
-    padding: 16px;
-    border-radius: 10px;
-    margin-bottom: 15px;
-    box-shadow: 0 2px 6px rgba(0, 0, 0, 0.05);
+    background: var(--white);
+    padding: 15px;
+    border-radius: 8px;
+    box-shadow: 0 2px 6px rgba(0, 0, 0, 0.06);
 }
 
-.task-title {
+.task-card h3 {
     font-size: 16px;
     margin-bottom: 12px;
+    overflow-wrap: anywhere;
 }
 
-.task-card p {
-    color: var(--muted-color);
-    font-size: 13px;
-    margin-top: 12px;
-}
-
-.priority-high,
-.priority-medium,
-.priority-low {
+.priority {
     display: inline-block;
     padding: 5px 10px;
     border-radius: 20px;
     font-size: 12px;
     font-weight: bold;
+    text-transform: capitalize;
 }
 
 .priority-high {
-    background-color: var(--high-color);
-    color: #b91c1c;
+    background: #fee2e2;
+    color: var(--high);
 }
 
 .priority-medium {
-    background-color: var(--medium-color);
-    color: #92400e;
+    background: #fef3c7;
+    color: #b45309;
 }
 
 .priority-low {
-    background-color: var(--low-color);
-    color: #166534;
+    background: #dcfce7;
+    color: #15803d;
 }
+
+/* Task Actions */
+
+.task-actions {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 6px;
+    margin-top: 15px;
+}
+
+.task-actions button {
+    font-size: 12px;
+    padding: 7px 9px;
+    background: #eef2ff;
+    color: var(--primary);
+}
+
+.task-actions .delete-btn {
+    background: #fee2e2;
+    color: #dc2626;
+    margin-left: auto;
+}
+
+/* Responsive Design */
 
 @media (max-width: 700px) {
     body {
@@ -157,13 +190,18 @@ body {
         grid-template-columns: 1fr;
     }
 
-    .task-form {
-        flex-direction: column;
-        align-items: stretch;
-    }
-
     .app-header {
         gap: 15px;
-        flex-wrap: wrap;
+    }
+
+    .task-form {
+        align-items: stretch;
+        flex-direction: column;
+    }
+
+    .task-form input,
+    .task-form select,
+    .task-form button {
+        width: 100%;
     }
 }

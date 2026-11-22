@@ -1,4 +1,5 @@
 
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -6,101 +7,60 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>TaskFlow - Kanban Board</title>
     <link rel="stylesheet" href="style.css">
+    <script src="script.js" defer></script>
 </head>
 <body>
 
     <header class="app-header">
-
-    <div class="logo">
-        <h1>TaskFlow</h1>
-        <p>Manage your work efficiently</p>
-    </div>
-
-    <button class="add-task-btn">
-        + Add Task
-    </button>
-
-</header>
-<section class="task-form">
-
-    <h2>Add a New Task</h2>
-
-    <input
-        type="text"
-        placeholder="Enter task title"
-    >
-
-    <select>
-        <option value="low">Low Priority</option>
-        <option value="medium">Medium Priority</option>
-        <option value="high">High Priority</option>
-    </select>
-
-    <button>Add Task</button>
-
-</section>
-
-<main class="board">
-
-    <!-- To Do Column -->
-    <section class="column">
-        <h2>To Do (3)</h2>
-
-        <div class="task-card">
-            <h3 class="task-title">Learn HTML basics</h3>
-            <span class="priority-high">High</span>
-            <p>Due: 25 Nov 2026</p>
+        <div class="logo">
+            <h1>TaskFlow</h1>
+            <p>Manage your work efficiently</p>
         </div>
 
-        <div class="task-card">
-            <h3 class="task-title">Practice CSS</h3>
-            <span class="priority-medium">Medium</span>
-            <p>Due: 27 Nov 2026</p>
+        <button class="add-task-btn" id="focus-add-task" type="button">
+            + Add Task
+        </button>
+    </header>
+
+    <main>
+        <form class="task-form" id="task-form">
+            <h2>Add a New Task</h2>
+
+            <input
+                type="text"
+                id="task-title"
+                placeholder="Enter task title"
+                required
+            >
+
+            <select id="task-priority">
+                <option value="low">Low Priority</option>
+                <option value="medium">Medium Priority</option>
+                <option value="high">High Priority</option>
+            </select>
+
+            <button type="submit">Add Task</button>
+        </form>
+
+        <div class="board" id="board">
+
+            <section class="column" data-status="todo">
+                <h2>To Do (<span class="task-count">0</span>)</h2>
+                <div class="task-list"></div>
+            </section>
+
+            <section class="column" data-status="doing">
+                <h2>In Progress (<span class="task-count">0</span>)</h2>
+                <div class="task-list"></div>
+            </section>
+
+            <section class="column" data-status="done">
+                <h2>Done (<span class="task-count">0</span>)</h2>
+                <div class="task-list"></div>
+            </section>
+
         </div>
+    </main>
 
-        <div class="task-card">
-            <h3 class="task-title">Create project folder</h3>
-            <span class="priority-low">Low</span>
-            <p>Due: 28 Nov 2026</p>
-        </div>
-
-    </section>
-
-
-    <!-- In Progress Column -->
-    <section class="column">
-        <h2>In Progress (2)</h2>
-
-        <div class="task-card">
-            <h3 class="task-title">Build TaskFlow layout</h3>
-            <span class="priority-high">High</span>
-            <p>Due: 26 Nov 2026</p>
-        </div>
-
-        <div class="task-card">
-            <h3 class="task-title">Learn Git and GitHub</h3>
-            <span class="priority-medium">Medium</span>
-            <p>Due: 29 Nov 2026</p>
-        </div>
-
-    </section>
-
-
-    <!-- Done Column -->
-    <section class="column">
-        <h2>Done (1)</h2>
-
-        <div class="task-card">
-            <h3 class="task-title">Create TaskFlow repository</h3>
-            <span class="priority-low">Low</span>
-            <p>Due: 20 Nov 2026</p>
-        </div>
-
-    </section>
-
-</main>
-
-
-    <script src="script.js"></script>
 </body>
 </html>
