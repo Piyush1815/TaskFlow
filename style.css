@@ -1,5 +1,4 @@
 
-
 :root {
     --primary: #4f46e5;
     --background: #f4f6fb;
@@ -62,7 +61,7 @@ button {
     background: var(--white);
     padding: 20px;
     border-radius: 10px;
-    margin-bottom: 30px;
+    margin-bottom: 20px;
     display: flex;
     flex-wrap: wrap;
     gap: 12px;
@@ -90,6 +89,33 @@ button {
 .task-form button {
     background: var(--primary);
     color: white;
+}
+
+/* Search and Import */
+
+.tools {
+    display: flex;
+    gap: 12px;
+    margin-bottom: 15px;
+}
+
+.tools input {
+    flex: 1;
+    padding: 12px;
+    border: 1px solid #d1d5db;
+    border-radius: 6px;
+    font-size: 14px;
+}
+
+.tools button {
+    background: var(--primary);
+    color: white;
+}
+
+#status-message {
+    margin-bottom: 15px;
+    color: var(--muted);
+    font-size: 14px;
 }
 
 /* Board */
@@ -179,7 +205,7 @@ button {
     margin-left: auto;
 }
 
-/* Responsive Design */
+/* Responsive */
 
 @media (max-width: 700px) {
     body {
@@ -203,5 +229,9 @@ button {
     .task-form select,
     .task-form button {
         width: 100%;
+    }
+
+    .tools {
+        flex-direction: column;
     }
 }

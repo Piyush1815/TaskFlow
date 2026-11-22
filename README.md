@@ -1,41 +1,49 @@
 
 # TaskFlow – Interactive Kanban Board
 
-TaskFlow is a responsive Kanban board built using HTML, CSS, and JavaScript. It helps users organize and manage tasks across three stages: To Do, In Progress, and Done.
+TaskFlow is a responsive Kanban board built using HTML, CSS, and JavaScript. It helps users organize tasks across three stages: To Do, In Progress, and Done.
 
 ## Features
 
-- Add new tasks with a title and priority.
-- Move tasks between To Do, In Progress, and Done.
-- Move tasks forward and backward between columns.
+- Add tasks with title and priority.
+- Move tasks between three Kanban columns.
 - Delete tasks with confirmation.
-- Automatically update task counts.
-- Prevent empty task titles.
-- Responsive layout for smaller screens.
-- Dynamic task rendering using JavaScript.
+- Automatically update column counts.
+- Save tasks using browser Local Storage.
+- Import five sample tasks using the JSONPlaceholder API.
+- Search tasks by title in real time.
+- Display friendly API error messages.
+- Responsive design for smaller screens.
 
 ## Technologies Used
 
 - HTML5
 - CSS3
 - JavaScript (Vanilla JS)
-- CSS Grid
-- Flexbox
+- CSS Grid and Flexbox
 - DOM Manipulation
-- Event Listeners
-- Event Delegation
+- Local Storage
+- JSON
+- Fetch API
+- Async/Await
 - Git and GitHub
 
 ## Concepts Learned
 
 - Arrays and objects
-- Array methods: filter(), find(), findIndex(), push(), splice()
-- DOM manipulation
-- addEventListener()
-- Event delegation
-- Dataset attributes
-- Dynamic HTML elements
-- Functions and conditional statements
+- JSON.stringify() and JSON.parse()
+- Browser Local Storage
+- Fetch API and API integration
+- Async/Await
+- Try/Catch/Finally
+- DOM manipulation and event listeners
+- Live search and array filtering
+- Error handling
+
+## API Used
+
+JSONPlaceholder:
+https://jsonplaceholder.typicode.com/todos?_limit=5
 
 ## Project Structure
 
@@ -51,19 +59,21 @@ TaskFlow/
 
 1. Clone or download this repository.
 2. Open the TaskFlow folder.
-3. Open index.html in your web browser.
-4. Start adding and managing tasks!
+3. Open index.html in your browser.
+4. Add, move, delete, search and import tasks.
 
-## Project Status
+## Project Progress
 
-- Week 1: Static Kanban board layout completed.
-- Week 2: Interactive task management using JavaScript completed.
+- Week 1: Static Kanban board using HTML and CSS.
+- Week 2: Add, move and delete tasks using JavaScript.
+- Week 3: Local Storage, API integration and live search.
 
 ## Future Improvements
 
-- Save tasks using Local Storage.
 - Edit existing task titles.
-- Add due dates to tasks.
+- Add due dates.
+- Add priority filters.
+- Clear the entire board.
 
 ## Author
 

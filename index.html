@@ -1,5 +1,4 @@
 
-
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -23,6 +22,7 @@
     </header>
 
     <main>
+
         <form class="task-form" id="task-form">
             <h2>Add a New Task</h2>
 
@@ -41,6 +41,20 @@
 
             <button type="submit">Add Task</button>
         </form>
+
+        <section class="tools">
+            <input
+                type="search"
+                id="search-input"
+                placeholder="Search tasks by title..."
+            >
+
+            <button type="button" id="import-btn">
+                Import Sample Tasks
+            </button>
+        </section>
+
+        <p id="status-message" role="status"></p>
 
         <div class="board" id="board">
 
