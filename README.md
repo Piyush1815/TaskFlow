@@ -1,25 +1,25 @@
 
 # TaskFlow – Interactive Kanban Board
 
-TaskFlow is a responsive Kanban board built using HTML, CSS, and JavaScript. It helps users organize tasks across three stages: To Do, In Progress, and Done.
+TaskFlow is a responsive task management application built using HTML, CSS, and JavaScript.
 
 ## Features
 
 - Add tasks with title and priority.
-- Move tasks between three Kanban columns.
+- Move tasks between To Do, In Progress, and Done.
 - Delete tasks with confirmation.
 - Automatically update column counts.
-- Save tasks using browser Local Storage.
-- Import five sample tasks using the JSONPlaceholder API.
+- Save tasks using Local Storage.
+- Import sample tasks using the JSONPlaceholder API.
 - Search tasks by title in real time.
-- Display friendly API error messages.
-- Responsive design for smaller screens.
+- Handle API errors gracefully.
+- Responsive design for mobile devices.
 
 ## Technologies Used
 
 - HTML5
 - CSS3
-- JavaScript (Vanilla JS)
+- JavaScript
 - CSS Grid and Flexbox
 - DOM Manipulation
 - Local Storage
@@ -33,12 +33,11 @@ TaskFlow is a responsive Kanban board built using HTML, CSS, and JavaScript. It 
 - Arrays and objects
 - JSON.stringify() and JSON.parse()
 - Browser Local Storage
-- Fetch API and API integration
+- API integration using Fetch
 - Async/Await
-- Try/Catch/Finally
-- DOM manipulation and event listeners
-- Live search and array filtering
-- Error handling
+- Try/Catch error handling
+- Event listeners
+- Live search and filtering
 
 ## API Used
 
@@ -60,20 +59,20 @@ TaskFlow/
 1. Clone or download this repository.
 2. Open the TaskFlow folder.
 3. Open index.html in your browser.
-4. Add, move, delete, search and import tasks.
+4. Start managing your tasks!
 
 ## Project Progress
 
 - Week 1: Static Kanban board using HTML and CSS.
-- Week 2: Add, move and delete tasks using JavaScript.
+- Week 2: Interactive task management using JavaScript.
 - Week 3: Local Storage, API integration and live search.
 
 ## Future Improvements
 
-- Edit existing task titles.
-- Add due dates.
-- Add priority filters.
-- Clear the entire board.
+- Edit existing tasks.
+- Add task due dates.
+- Filter tasks by priority.
+- Prevent duplicate API imports.
 
 ## Author
 
